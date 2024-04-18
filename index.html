@@ -667,6 +667,17 @@
     }());
     S.init();
 </script>
-  <audio src="https://suhuli.github.io/love/love.mp3" autoplay=""></audio>
+      <script>    
+        var audio=document.createElement('audio');
+        audio.src='https://suhuli.github.io/love/love.mp3';
+        audio.autoplay=true;
+        var duration;
+duration=audio.duration;//长度单位是秒
+function bgm(){
+    audio.play();//播放
+}
+window.setInterval("bgm()",duration*1000+1000);
+        document.head.appendChild(audio);
+    </script>
 </body>
 </html>
