@@ -667,17 +667,15 @@
     }());
     S.init();
 </script>
-      <script>    
-        var audio=document.createElement('audio');
-        audio.src='https://suhuli.github.io/love/love.mp3';
-        audio.autoplay=true;
-        var duration;
-duration=audio.duration;//长度单位是秒
-function bgm(){
-    audio.play();//播放
-}
-window.setInterval("bgm()",duration*1000+1000);
-        document.head.appendChild(audio);
-    </script>
+      <audio autoplay="autopaly" loop="loop" id="audios">
+    <source src="https://suhuli.github.io/love/love.mp3" type="audio/mp3" />
+</audio>
+<script>
+// 将以下代码添加到js入口函数内即可
+document.addEventListener('touchstart', function() {
+    document.getElementById('audios').play()
+})
+ 
+</script>
 </body>
 </html>
